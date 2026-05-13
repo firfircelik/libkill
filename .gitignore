@@ -1,0 +1,5 @@
+/libkill
+dist/
+coverage.out
+.DS_Store
+*.log
