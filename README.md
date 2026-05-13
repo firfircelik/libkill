@@ -1,5 +1,9 @@
 # LibKill
 
+<p align="center">
+  <img src="libkill.jpg" alt="LibKill terminal screenshot" width="600">
+</p>
+
 Supply-chain compromise scanner and cleaner. Detects and removes compromised npm/pip packages using threat intelligence from Socket.dev, GitHub Advisory DB, OSV.dev, and security research.
 
 ```
