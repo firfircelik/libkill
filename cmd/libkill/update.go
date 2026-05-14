@@ -21,6 +21,15 @@ func newUpdateCmd(a *app) *cobra.Command {
 			} else {
 				fmt.Printf("Added %d new threat entries.\n", n)
 			}
+
+			m, err := a.feed.UpdateMalware(context.Background())
+			if err != nil {
+				return fmt.Errorf("update malware: %w", err)
+			}
+			if m > 0 {
+				fmt.Printf("Added %d new malware family entries.\n", m)
+			}
+
 			return nil
 		},
 	}

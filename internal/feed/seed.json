@@ -21374,5 +21374,77 @@
     "feed": "socket",
     "severity": "high",
     "reason": "Beamglea phishing campaign; npm+unpkg CDN phishing infrastructure targeting 135+ orgs across manufacturing/tech/energy sectors"
+  },
+  {
+    "package": "node-ipc",
+    "version": "9.1.6",
+    "ecosystem": "npm",
+    "feed": "research",
+    "severity": "critical",
+    "reason": "node-ipc credential stealer: compromised maintainer account ('atiertant') via expired email domain; obfuscated IIFE harvests 127 credential file patterns (AWS/Azure/GCP/SSH/K8s/Docker/npm/macOS Keychain) and exfiltrates via DNS TXT queries to bt.node.js through resolver sh.azurestaticprovider.net (May 2026)"
+  },
+  {
+    "package": "node-ipc",
+    "version": "9.2.3",
+    "ecosystem": "npm",
+    "feed": "research",
+    "severity": "critical",
+    "reason": "node-ipc credential stealer: compromised maintainer account ('atiertant') via expired email domain; obfuscated IIFE harvests 127 credential file patterns (AWS/Azure/GCP/SSH/K8s/Docker/npm/macOS Keychain) and exfiltrates via DNS TXT queries to bt.node.js through resolver sh.azurestaticprovider.net (May 2026)"
+  },
+  {
+    "package": "node-ipc",
+    "version": "12.0.1",
+    "ecosystem": "npm",
+    "feed": "research",
+    "severity": "critical",
+    "reason": "node-ipc credential stealer: compromised maintainer account ('atiertant') via expired email domain; obfuscated IIFE harvests 127 credential file patterns (AWS/Azure/GCP/SSH/K8s/Docker/npm/macOS Keychain) and exfiltrates via DNS TXT queries to bt.node.js through resolver sh.azurestaticprovider.net (May 2026)"
+  },
+  {
+    "package": "@tanstack/react-router",
+    "version": "1.169.5",
+    "ecosystem": "npm",
+    "feed": "socket",
+    "severity": "critical",
+    "reason": "Mini Shai-Hulud Wave 4 supply-chain attack: npm worm with valid SLSA Build Level 3 provenance; chained pull_request_target Pwn Request + Actions cache poisoning + OIDC token extraction; Session P2P C2 + GitHub dead-drop exfil; Claude Code/VS Code persistence; CVE-2026-45321"
+  },
+  {
+    "package": "@tanstack/react-router",
+    "version": "1.169.8",
+    "ecosystem": "npm",
+    "feed": "socket",
+    "severity": "critical",
+    "reason": "Mini Shai-Hulud Wave 4 supply-chain attack: npm worm with valid SLSA Build Level 3 provenance; chained pull_request_target Pwn Request + Actions cache poisoning + OIDC token extraction; Session P2P C2 + GitHub dead-drop exfil; Claude Code/VS Code persistence; CVE-2026-45321"
+  },
+  {
+    "package": "next",
+    "version": "15.5.15",
+    "ecosystem": "npm",
+    "feed": "research",
+    "severity": "high",
+    "reason": "CVE-2026-44578 (CVSS 8.6): Next.js WebSocket Upgrade SSRF — unauthenticated attackers can force self-hosted instances to make internal HTTP requests via crafted absolute-form HTTP request with Upgrade: websocket headers, accessing internal services/cloud metadata endpoints/admin panels; fixes in 15.5.16 and 16.2.5"
+  },
+  {
+    "package": "next",
+    "version": "16.2.4",
+    "ecosystem": "npm",
+    "feed": "research",
+    "severity": "high",
+    "reason": "CVE-2026-44578 (CVSS 8.6): Next.js WebSocket Upgrade SSRF — unauthenticated attackers can force self-hosted instances to make internal HTTP requests via crafted absolute-form HTTP request with Upgrade: websocket headers, accessing internal services/cloud metadata endpoints/admin panels; fixes in 15.5.16 and 16.2.5"
+  },
+  {
+    "package": "next",
+    "version": "14.2.29",
+    "ecosystem": "npm",
+    "feed": "research",
+    "severity": "high",
+    "reason": "CVE-2026-44578 (CVSS 8.6): Next.js WebSocket Upgrade SSRF — unauthenticated attackers can force self-hosted instances to make internal HTTP requests via crafted absolute-form HTTP request with Upgrade: websocket headers, accessing internal services/cloud metadata endpoints/admin panels; fixes in 15.5.16 and 16.2.5"
+  },
+  {
+    "package": "next",
+    "version": "13.5.9",
+    "ecosystem": "npm",
+    "feed": "research",
+    "severity": "high",
+    "reason": "CVE-2026-44578 (CVSS 8.6): Next.js WebSocket Upgrade SSRF — unauthenticated attackers can force self-hosted instances to make internal HTTP requests via crafted absolute-form HTTP request with Upgrade: websocket headers, accessing internal services/cloud metadata endpoints/admin panels; fixes in 15.5.16 and 16.2.5"
   }
 ]

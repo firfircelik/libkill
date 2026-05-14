@@ -42,5 +42,13 @@ func (a *app) forceUpdate() error {
 		return err
 	}
 	fmt.Fprintf(os.Stderr, "  %d new threats added\n", n)
+
+	m, err := a.feed.UpdateMalware(context.Background())
+	if err != nil {
+		return err
+	}
+	if m > 0 {
+		fmt.Fprintf(os.Stderr, "  %d new malware families added\n", m)
+	}
 	return nil
 }
