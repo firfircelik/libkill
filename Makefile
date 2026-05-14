@@ -1,4 +1,4 @@
-.PHONY: build test lint clean install
+.PHONY: build test lint clean install build-all build-linux-amd64 build-linux-arm64 build-darwin-amd64 build-darwin-arm64 build-windows-amd64
 
 BINARY := libkill
 CMD_DIR := ./cmd/libkill
@@ -27,10 +27,21 @@ install: build
 	cp $(BINARY) $(HOME)/.local/bin/
 
 build-all:
-	mkdir -p dist
-	GOOS=darwin GOARCH=amd64 go build -o dist/libkill-darwin-amd64 $(CMD_DIR)
-	GOOS=darwin GOARCH=arm64 go build -o dist/libkill-darwin-arm64 $(CMD_DIR)
-	GOOS=linux GOARCH=amd64 go build -o dist/libkill-linux-amd64 $(CMD_DIR)
-	GOOS=linux GOARCH=arm64 go build -o dist/libkill-linux-arm64 $(CMD_DIR)
-	GOOS=windows GOARCH=amd64 go build -o dist/libkill-windows-amd64.exe $(CMD_DIR)
-	@echo "Built all targets in dist/"
+	@echo "build-all requires C cross-compilers for each target (CGO is mandatory)"
+	@echo "Use 'make build-release' to build only native platform, or see .github/workflows/release.yml"
+	@echo ""
+
+build-linux-amd64:
+	GOOS=linux GOARCH=amd64 CGO_ENABLED=1 go build -o dist/libkill-linux-amd64 $(CMD_DIR)
+
+build-linux-arm64:
+	GOOS=linux GOARCH=arm64 CGO_ENABLED=1 CC=aarch64-linux-gnu-gcc go build -o dist/libkill-linux-arm64 $(CMD_DIR)
+
+build-darwin-amd64:
+	GOOS=darwin GOARCH=amd64 CGO_ENABLED=1 go build -o dist/libkill-darwin-amd64 $(CMD_DIR)
+
+build-darwin-arm64:
+	GOOS=darwin GOARCH=arm64 CGO_ENABLED=1 go build -o dist/libkill-darwin-arm64 $(CMD_DIR)
+
+build-windows-amd64:
+	GOOS=windows GOARCH=amd64 CGO_ENABLED=1 CC=x86_64-w64-mingw32-gcc go build -o dist/libkill-windows-amd64.exe $(CMD_DIR)
